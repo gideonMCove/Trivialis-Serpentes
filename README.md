@@ -52,7 +52,7 @@ The user can select difficulty levels at the start which will add obstacles to t
 
 ![Game Over Screen](./updatedGameOver.PNG)
 
-Unfortunately, all things must come to an end. This game is no different. If your snake collides with any obstacle, itself, or the borders of the board you will be presented with a **Game Over** screen. You will be presented with your *score*, which is the amount of correct trivia answers you scored out of the total amount asked. Players will be prompted to play again, which will reset the game state.
+Unfortunately, in life all things must come to an end. This game is no different. If your snake collides with any obstacle, itself, or the borders of the board you will be presented with a **Game Over** screen. You will be presented with your *score*, which is the amount of correct trivia answers you scored out of the total amount asked. Players will be prompted to play again, which will reset the game state.
 
 ![Whiteboarding](./ProjectOverview.PNG)
 
