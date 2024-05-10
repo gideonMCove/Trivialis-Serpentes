@@ -7,7 +7,7 @@ The game of *Snake* with a Trivia *Twist*
 # The Board
 ![The base grid of the game. Shows snake prototype and board objective prototype](./BaseGrid.PNG)
 
-Just like the classic game of *snake*, ***Trivialis-Serpentes*** has a grid board for the *snake* to move around. Each grid square will have its own unique `id`. The *Snake* will be an `array` that will populate itself with `push()`. The *Snake* must eat the <span style ="color:#D1FFBD">*fruit*</span>, represented by the <span style ="color:#D1FFBD">green square</span>, to gain points. After being eaten, the <span style ="color:#D1FFBD">green square</span> will populate again on the grid in space not taken up by the *Snake*, or any other objects. But thats not all that happens when the *Snake* reaches the <span style ="color:#D1FFBD">green square</span>
+Just like the classic game of *snake*, ***Trivialis-Serpentes*** has a grid board for the *snake* to move around. Each grid square will have its own unique `id`. The *Snake* will be **controlled with the players arrow keys**, and is an `array` that will populate itself with `push()`. The *Snake* must eat the <span style ="color:#D1FFBD">*fruit*</span>, represented by the <span style ="color:#D1FFBD">green square</span>, to gain points. After being eaten, the <span style ="color:#D1FFBD">green square</span> will populate again on the grid in space not taken up by the *Snake*, or any other objects. But thats not all that happens when the *Snake* reaches the <span style ="color:#D1FFBD">green square</span>
 
 # Snake Themed Trivia!
 
@@ -52,7 +52,9 @@ The user can select difficulty levels at the start which will add obstacles to t
 
 ![Game Over Screen](./updatedGameOver.PNG)
 
-Unfortunately, in life all things must come to an end. This game is no different. If your snake collides with any obstacle, itself, or the borders of the board you will be presented with a **Game Over** screen. You will be presented with your *score*, which is the amount of correct trivia answers you scored out of the total amount asked. Players will be prompted to play again, which will reset the game state.
+> Unfortunately, in life all things must come to an end. 
+
+This game is no different. If your snake collides with any obstacle, itself, or the borders of the board you will be presented with a **Game Over** screen. You will be presented with your *score*, which is the amount of correct trivia answers you scored out of the total amount asked. Players will be prompted to play again, which will reset the game state.
 
 ![Whiteboarding](./ProjectOverview.PNG)
 
