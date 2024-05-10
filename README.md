@@ -5,7 +5,7 @@ The game of *Snake* with a Trivia *Twist*
 # The Board
 ![The base grid of the game. Shows snake prototype and board objective prototype](./BaseGrid.PNG)
 
-Just like the classic game of *snake*, ***Trivialis-Serpentes*** has a grid board for the *snake* to move around. The *Snake* must eat the *fruit*, represented by the green square, to gain points. However in this game, when the snake reaches the *fruit*(represented by the green square) something else happens...
+Just like the classic game of *snake*, ***Trivialis-Serpentes*** has a grid board for the *snake* to move around. The *Snake* must eat the *fruit*, represented by the green square, to gain points. However in this game, when the snake reaches the *fruit*  something else happens...
 
 # Snake Themed Trivia!
 
