@@ -7,15 +7,15 @@ The game of *Snake* with a Trivia *Twist*
 # The Board
 ![The base grid of the game. Shows snake prototype and board objective prototype](./BaseGrid.PNG)
 
-Just like the classic game of *snake*, ***Trivialis-Serpentes*** has a grid board for the *snake* to move around. The *Snake* must eat the *fruit*, represented by the green square, to gain points. However in this game, when the snake reaches the *fruit*  something else happens...
+Just like the classic game of *snake*, ***Trivialis-Serpentes*** has a grid board for the *snake* to move around. Each grid square will have its own unique `id`. The *Snake* will be an `array` that will populate itself with `push()`. The *Snake* must eat the <span style ="color:#D1FFBD">*fruit*</span>, represented by the <span style ="color:#D1FFBD">green square</span>, to gain points. After being eaten, the <span style ="color:#D1FFBD">green square</span> will populate again on the grid in space not taken up by the *Snake*, or any other objects. But thats not all that happens when the *Snake* reaches the <span style ="color:#D1FFBD">green square</span>
 
 # Snake Themed Trivia!
 
 ![Shows basic trivia layout](./TriviaPopUp.PNG)
 
-> To earn a point you must also answer a trivia question about snakes!
+> To earn a point you must also answer a trivia question about *Snakes!*
 
- Each question will have three possible answers that can be selected. The answers will be shown on <cards> with both text and images to represent the snakes. Each question and its answers will written with `arrays`inside of `objects` inside of `arrays`, like so:
+ Each question will have three possible answers that can be selected. The answers will be shown on <cards> with both text and images to represent the *Snakes.* Each question and its answers will written with `arrays`inside of `objects` inside of `arrays`, like so:
 
 ```javascript
 Const questions = [
@@ -31,6 +31,7 @@ Const questions = [
 }
 ]
 ```
+To choose what question will be posed to the player, A `random.()` function will be used.
 
 # The Reprecussions of a Wrong Answer
 
@@ -49,9 +50,9 @@ The user can select difficulty levels at the start which will add obstacles to t
 
 # Game over!
 
-![Game Over Screen](./GameOverScreen.PNG)
+![Game Over Screen](./updatedGameOver.PNG)
 
-Unfortunately, all things must come to an end. This game is no different. If your snake collides with any obstacle, itself, or the borders of the board you will be presented with a **Game Over** screen. You will be presented with your *score*, which is the amount of correct trivia answers you scored out of the total amount asked. 
+Unfortunately, all things must come to an end. This game is no different. If your snake collides with any obstacle, itself, or the borders of the board you will be presented with a **Game Over** screen. You will be presented with your *score*, which is the amount of correct trivia answers you scored out of the total amount asked. Players will be prompted to play again, which will reset the game state.
 
 ![Whiteboarding](./ProjectOverview.PNG)
 
@@ -62,5 +63,5 @@ Unfortunately, all things must come to an end. This game is no different. If you
 
 [ProProfs](https://www.proprofs.com/quiz-school/quizshow.php?title=hard-snake-quiz&q=7) for snake trivia.
 
-[Peakpx](https://www.peakpx.com) for snake pics
+[Peakpx](https://www.peakpx.com) for snake pictures
 
