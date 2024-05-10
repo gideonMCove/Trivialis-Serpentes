@@ -1,4 +1,5 @@
-![Project Whiteboard Overview](./TitleScreenMockUp.PNG)
+<!-- ![Project Whiteboard Overview](./TitleScreenMockUp.PNG) -->
+<img src ="TitleScreenMockUp.PNG" alt="Title Screen Mockup" width =520px/> 
 # ***Trivialis-Serpentes***
 The game of *Snake* with a Trivia *Twist*
 
