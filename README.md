@@ -1,4 +1,4 @@
-![Project Whiteboard Overview](./ProjectOverview.PNG)
+![Project Whiteboard Overview](./TitleScreenMockUp.PNG)
 # ***Trivialis-Serpentes***
 The game of *Snake* with a Trivia *Twist*
 
@@ -34,7 +34,8 @@ Const questions = [
 
 ![Shows what happens to your snake after eating a fruit](./SnakeGrowthDemonstration.PNG)
 
-If you answer the trivia question correctly, then your snake will still grow, by at a small rate. If you answer the question incorrectly, your snake ballons in size, as shown in the image above. 
+If you answer the trivia question correctly, then your snake will still grow, by at a small rate (snakeLength += 1). If you answer the question incorrectly, your snake ballons in size (snakeLength += 3), as shown in the image above. 
+
 
 # Making the Board More Interesting
 
@@ -50,8 +51,14 @@ The user can select difficulty levels at the start which will add obstacles to t
 
 Unfortunately, all things must come to an end. This game is no different. If your snake collides with any obstacle, itself, or the borders of the board you will be presented with a **Game Over** screen. You will be presented with your *score*, which is the amount of correct trivia answers you scored out of the total amount asked. 
 
+![Whiteboarding](./ProjectOverview.PNG)
+
 # Credit
+
+
 [Figma](https://figma.com) for creating the whiteboarding (and Kass for telling me about it!).
 
 [ProProfs](https://www.proprofs.com/quiz-school/quizshow.php?title=hard-snake-quiz&q=7) for snake trivia.
+
+[Peakpx](https://www.peakpx.com) for snake pics
 
