@@ -67,3 +67,10 @@ This game is no different. If your snake collides with any obstacle, itself, or 
 
 [Peakpx](https://www.peakpx.com) for snake pictures
 
+[DiscoverDeadly](https://www.discoverdeadly.com.au/interesting-snake-facts) for snake trivia.
+
+[NPS](https://www.nps.gov/gate/learn/nature/eastern-garter-snake.htm#:~:text=Unlike%20most%20snakes%2C%20garters%20do,f%20Gateway%20National%20Recreation%20Area.) for snake trivia
+
+[JSTOR](https://www.jstor.org/stable/1446454?origin=crossref)
+
+[Smithsonian's National Zoo & Conversation Biology Institute](https://nationalzoo.si.edu/animals/gaboon-viper#:~:text=Gaboon%20vipers%20are%20venomous.,fangs%20of%20any%20venomous%20snake.)
