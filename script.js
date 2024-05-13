@@ -79,6 +79,7 @@ let amountQuestions = questions.length
 function getRandomInt(min, max ) {   //Random number. min and max is range of questions indices.
     const minCeiled = Math.ceil(min) //Math.Ceil() always rounds up and returns the smallest integer greater than or equal to a given number, we dont want a number less than min
     const maxFloored = Math.floor(max)//Math.floor always rounds down, we dont want a number greater than the max.
+    
    return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled)
         
 
@@ -89,7 +90,7 @@ function getAlreadyAsked(){//Determines if question has already been asked, if Y
 
         for (i = 0; i<alreadyAsked.length; i++) {
         if (alreadyAsked[i] == randomInt){
-            randomInt = getRandomInt(0,2)
+            randomInt = getRandomInt(0,amountQuestions)
             getAlreadyAsked()
             
         }else if( alreadyAsked[i] != randomInt){
@@ -120,6 +121,9 @@ let button0 = document.querySelector("#answer0")
 let button1 = document.querySelector("#answer1")
 let button2 = document.querySelector('#answer2')
 let button3 = document.querySelector('#answer3')
+let buttonReset = document.querySelector('#reset')
+let buttonNext = document.querySelector('#next')
+
 
 button0.addEventListener('click', () => {
     if (questions[randomInt].correct != 0){
@@ -129,11 +133,11 @@ button0.addEventListener('click', () => {
         }else if (questions[randomInt].correct == 2){
             document.getElementById('answer2').style.backgroundColor ='#00FF00'
         }
-        else if (questions[randomInt.correct == 3]){
+        else if (questions[randomInt].correct == 3){
             document.getElementById('answer3').style.backgroundColor ='#00FF00'
         }
 
-    }else if(questions[randomInt.correct == 0]){
+    }else if(questions[randomInt].correct == 0){
         document.getElementById('answer0').style.backgroundColor = '#00FF00'
     }
     
@@ -146,11 +150,11 @@ button1.addEventListener('click', () => {
         }else if (questions[randomInt].correct == 2){
             document.getElementById('answer2').style.backgroundColor ='#00FF00'
         }
-        else if (questions[randomInt.correct == 3]){
+        else if (questions[randomInt].correct == 3){
             document.getElementById('answer3').style.backgroundColor ='#00FF00'
         }
 
-    }else if(questions[randomInt.correct == 1]){
+    }else if(questions[randomInt].correct == 1){
         document.getElementById('answer1').style.backgroundColor = '#00FF00'
     }
 })
@@ -162,11 +166,11 @@ button2.addEventListener('click', () => {
         }else if (questions[randomInt].correct == 0){
             document.getElementById('answer0').style.backgroundColor ='#00FF00'
         }
-        else if (questions[randomInt.correct == 3]){
+        else if (questions[randomInt].correct == 3){
             document.getElementById('answer3').style.backgroundColor ='#00FF00'
         }
 
-    }else if(questions[randomInt.correct == 2]){
+    }else if(questions[randomInt].correct == 2){
         document.getElementById('answer2').style.backgroundColor = '#00FF00'
     }
 })
@@ -178,11 +182,14 @@ button3.addEventListener('click', () => {
         }else if (questions[randomInt].correct == 2){
             document.getElementById('answer2').style.backgroundColor ='#00FF00'
         }
-        else if (questions[randomInt.correct == 0]){
+        else if (questions[randomInt].correct == 0){
             document.getElementById('answer0').style.backgroundColor ='#00FF00'
         }
 
-    }else if(questions[randomInt.correct == 3]){
+    }else if(questions[randomInt].correct == 3){
         document.getElementById('answer3').style.backgroundColor = '#00FF00'
     }
+})
+buttonNext.addEventListener('click', () =>{
+    alreadyAsked.push(randomInt)
 })
