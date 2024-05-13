@@ -122,14 +122,67 @@ let button2 = document.querySelector('#answer2')
 let button3 = document.querySelector('#answer3')
 
 button0.addEventListener('click', () => {
-    document.getElementById('answer0').innerText = "You clicked me"
+    if (questions[randomInt].correct != 0){
+        document.getElementById('answer0').style.backgroundColor = '#FF0000'
+        if (questions[randomInt].correct == 1){
+            document.getElementById('answer1').style.backgroundColor ='#00FF00'
+        }else if (questions[randomInt].correct == 2){
+            document.getElementById('answer2').style.backgroundColor ='#00FF00'
+        }
+        else if (questions[randomInt.correct == 3]){
+            document.getElementById('answer3').style.backgroundColor ='#00FF00'
+        }
+
+    }else if(questions[randomInt.correct == 0]){
+        document.getElementById('answer0').style.backgroundColor = '#00FF00'
+    }
+    
 })
 button1.addEventListener('click', () => {
-    document.getElementById('answer1').innerText = "Ahah"
+    if (questions[randomInt].correct != 1){
+        document.getElementById('answer1').style.backgroundColor = '#FF0000'
+        if (questions[randomInt].correct == 0){
+            document.getElementById('answer0').style.backgroundColor ='#00FF00'
+        }else if (questions[randomInt].correct == 2){
+            document.getElementById('answer2').style.backgroundColor ='#00FF00'
+        }
+        else if (questions[randomInt.correct == 3]){
+            document.getElementById('answer3').style.backgroundColor ='#00FF00'
+        }
+
+    }else if(questions[randomInt.correct == 1]){
+        document.getElementById('answer1').style.backgroundColor = '#00FF00'
+    }
 })
 button2.addEventListener('click', () => {
-    document.getElementById('answer2').innerText = "You clicked on me"
+    if (questions[randomInt].correct != 2){
+        document.getElementById('answer2').style.backgroundColor = '#FF0000'
+        if (questions[randomInt].correct == 1){
+            document.getElementById('answer1').style.backgroundColor ='#00FF00'
+        }else if (questions[randomInt].correct == 0){
+            document.getElementById('answer0').style.backgroundColor ='#00FF00'
+        }
+        else if (questions[randomInt.correct == 3]){
+            document.getElementById('answer3').style.backgroundColor ='#00FF00'
+        }
+
+    }else if(questions[randomInt.correct == 2]){
+        document.getElementById('answer2').style.backgroundColor = '#00FF00'
+    }
 })
 button3.addEventListener('click', () => {
-    document.getElementById('answer3').innerText = "Ooo La La"
+    if (questions[randomInt].correct != 3){
+        document.getElementById('answer3').style.backgroundColor = '#FF0000'
+        if (questions[randomInt].correct == 1){
+            document.getElementById('answer1').style.backgroundColor ='#00FF00'
+        }else if (questions[randomInt].correct == 2){
+            document.getElementById('answer2').style.backgroundColor ='#00FF00'
+        }
+        else if (questions[randomInt.correct == 0]){
+            document.getElementById('answer0').style.backgroundColor ='#00FF00'
+        }
+
+    }else if(questions[randomInt.correct == 3]){
+        document.getElementById('answer3').style.backgroundColor = '#00FF00'
+    }
 })
