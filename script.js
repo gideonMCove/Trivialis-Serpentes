@@ -1,22 +1,22 @@
 const questions = [
 {
     question: "Which Snake Doesn't Have to Mate to Lay Eggs?",
-    answers: ["Copperhead", "Cobra", "Corn Snake"],
+    answers: ["Copperhead", "Cobra", "Corn Snake","Kingsnake"],
     correct: 2
 },
 {
     question: "What Do Snakes Smell With?",
-    answers: ["Their Nose", "Their Tongue", "Through Their Skin"],
+    answers: ["Their Nose", "Their Tongue", "Through Their Skin","They Can't Smell"],
     correct: 1
 },
 {
     question: "Which of These Snakes is Venomous?",
-    answers: ["King Cobra", "Garter Snake", "Python" ],
+    answers: ["King Cobra", "Milk Snake", "Python", "Kingsnake" ],
     correct: 0
 },
 {
     question: "Are Snakes Warm-Blooded or Cold-Blooded?",
-    answers: ["Warm-Blooded", "Cold-Blooded"],
+    answers: ["Warm-Blooded", "Cold-Blooded", "Neither", "Both"],
     correct: 0
 },
 {
@@ -105,5 +105,14 @@ function getAlreadyAsked(){//Determines if question has already been asked, if Y
 
 
 getAlreadyAsked()
-// console.log(randomInt)
-console.log(alreadyAsked)
+trivaQuestion = questions[randomInt].question
+document.getElementById('question').innerText = trivaQuestion
+answer0 = questions[randomInt].answers[0]
+document.getElementById('answer0').innerText = answer0
+answer1 = questions[randomInt].answers[1]
+document.getElementById('answer1').innerText = answer1
+answer2 = questions[randomInt].answers[2]
+document.getElementById('answer2').innerText = answer2
+answer3 = questions[randomInt].answers[3]
+document.getElementById('answer3').innerText = answer3
+
