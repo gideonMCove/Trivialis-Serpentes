@@ -106,7 +106,7 @@ function getAlreadyAsked(){//Determines if question has already been asked, if Y
 
 getAlreadyAsked()
 trivaQuestion = questions[randomInt].question
-document.getElementById('question').innerText = trivaQuestion
+document.getElementById('triviaQuestions').innerText = trivaQuestion
 answer0 = questions[randomInt].answers[0]
 document.getElementById('answer0').innerText = answer0
 answer1 = questions[randomInt].answers[1]
@@ -116,3 +116,20 @@ document.getElementById('answer2').innerText = answer2
 answer3 = questions[randomInt].answers[3]
 document.getElementById('answer3').innerText = answer3
 
+let button0 = document.querySelector("#answer0")
+let button1 = document.querySelector("#answer1")
+let button2 = document.querySelector('#answer2')
+let button3 = document.querySelector('#answer3')
+
+button0.addEventListener('click', () => {
+    document.getElementById('answer0').innerText = "You clicked me"
+})
+button1.addEventListener('click', () => {
+    document.getElementById('answer1').innerText = "Ahah"
+})
+button2.addEventListener('click', () => {
+    document.getElementById('answer2').innerText = "You clicked on me"
+})
+button3.addEventListener('click', () => {
+    document.getElementById('answer3').innerText = "Ooo La La"
+})
