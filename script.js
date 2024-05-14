@@ -226,9 +226,11 @@ function playNext () {
 
 
 buttonPlay.addEventListener('click',() => {
+    buttonPlay.disabled = true;
     shuffle()    
     i =0                              
     goNext = 0
+    score = 0
     setBoard()
     button0.addEventListener('click', () => {
         goNext ++
