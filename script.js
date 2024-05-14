@@ -63,16 +63,14 @@ const questions = [
 
 
 ]
-//For (i=0; i<questions.length; i++) {
-//      getRandomInt(0,amountQuestions)
-//      getAlreadyAsked()
-//      getElementById("question").innerHTML = questions[randomInt].question
-//      getElementById("answers").innerHTML = questions[randomInt].answers
-//      if (inputValue == questions.[randomInt].correct){
-//          score +=1
-//      if (i == (questions.length) - 1)
-//          then do game over.   
-//}
+// function playGame(){
+    //For (i=0; i<questions.length; i++) {
+    //      getRandomInt(0,amountQuestions) happens automatically
+    //      getAlreadyAsked()
+    //      setBoard()
+    //      Then Button functions user needs to click
+    //      Then Next Button function leads to a new loop user needs to click
+    //}}
 
 let randomInt = 0 
 let amountQuestions = questions.length
@@ -85,13 +83,19 @@ function getRandomInt(min, max ) {   //Random number. min and max is range of qu
 
   }
 randomInt = getRandomInt(0,amountQuestions)
-let alreadyAsked = []
+let alreadyAsked = [""]
 function getAlreadyAsked(){//Determines if question has already been asked, if Y then get new question, if N then questions index value gets pushed to array.
 
         for (i = 0; i<alreadyAsked.length; i++) {
         if (alreadyAsked[i] == randomInt){
-            randomInt = getRandomInt(0,amountQuestions)
-            getAlreadyAsked()
+            for(i = randomInt; i<questions.length; i++){
+                if(questions[i] != alreadyAsked[i])
+                    alreadyAsked.push(alreadyAsked[i])//brain fried look at findindex
+            
+            
+            }
+
+            
             
         }else if( alreadyAsked[i] != randomInt){
             alreadyAsked.push(randomInt)
@@ -106,17 +110,19 @@ function getAlreadyAsked(){//Determines if question has already been asked, if Y
 
 
 getAlreadyAsked()
-trivaQuestion = questions[randomInt].question
-document.getElementById('triviaQuestions').innerText = trivaQuestion
-answer0 = questions[randomInt].answers[0]
-document.getElementById('answer0').innerText = answer0
-answer1 = questions[randomInt].answers[1]
-document.getElementById('answer1').innerText = answer1
-answer2 = questions[randomInt].answers[2]
-document.getElementById('answer2').innerText = answer2
-answer3 = questions[randomInt].answers[3]
-document.getElementById('answer3').innerText = answer3
-
+function setBoard(){
+        trivaQuestion = questions[randomInt].question
+        document.getElementById('triviaQuestions').innerText = trivaQuestion
+        answer0 = questions[randomInt].answers[0]
+        document.getElementById('answer0').innerText = answer0
+        answer1 = questions[randomInt].answers[1]
+        document.getElementById('answer1').innerText = answer1
+        answer2 = questions[randomInt].answers[2]
+        document.getElementById('answer2').innerText = answer2
+        answer3 = questions[randomInt].answers[3]
+        document.getElementById('answer3').innerText = answer3
+}
+setBoard()
 let button0 = document.querySelector("#answer0")
 let button1 = document.querySelector("#answer1")
 let button2 = document.querySelector('#answer2')
