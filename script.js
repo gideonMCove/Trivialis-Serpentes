@@ -202,6 +202,9 @@ function playNext () {
             }
         }
     })
+    buttonReset.addEventListener('click', () => {
+        location.reload()
+    })
     if(i == (questions.length - 1)){
         trivaQuestion = ''
         document.getElementById('triviaQuestions').innerText = trivaQuestion
@@ -320,8 +323,13 @@ buttonPlay.addEventListener('click',() => {
     buttonNext.addEventListener('click', () => {
     playNext()
     })
-    
+    buttonReset.addEventListener('click', () => {
+        location.reload()
+    })
     
 
     }
 )
+buttonReset.addEventListener('click', () => {
+    location.reload()
+})
