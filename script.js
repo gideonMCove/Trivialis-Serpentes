@@ -1,4 +1,4 @@
-const questions = [
+let questions = [
 {
     question: "Which Snake Doesn't Have to Mate to Lay Eggs?",
     answers: ["Copperhead", "Cobra", "Corn Snake","Kingsnake"],
@@ -63,139 +63,240 @@ const questions = [
 
 
 ]
-// function playGame(){
-    //For (i=0; i<questions.length; i++) {
-    //      getRandomInt(0,amountQuestions) happens automatically
-    //      getAlreadyAsked()
-    //      setBoard()
-    //      Then Button functions user needs to click
-    //      Then Next Button function leads to a new loop user needs to click
-    //}}
-
-let randomInt = 0 
-let amountQuestions = questions.length
-function getRandomInt(min, max ) {   //Random number. min and max is range of questions indices.
-    const minCeiled = Math.ceil(min) //Math.Ceil() always rounds up and returns the smallest integer greater than or equal to a given number, we dont want a number less than min
-    const maxFloored = Math.floor(max)//Math.floor always rounds down, we dont want a number greater than the max.
-    
-   return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled)
-        
-
-  }
-randomInt = getRandomInt(0,amountQuestions)
-let alreadyAsked = [""]
-function getAlreadyAsked(){//Determines if question has already been asked, if Y then get new question, if N then questions index value gets pushed to array.
-
-        for (i = 0; i<alreadyAsked.length; i++) {
-        if (alreadyAsked[i] == randomInt){
-            for(i = randomInt; i<questions.length; i++){
-                if(questions[i] != alreadyAsked[i])
-                    alreadyAsked.push(alreadyAsked[i])//brain fried look at findindex
-            
-            
-            }
-
-            
-            
-        }else if( alreadyAsked[i] != randomInt){
-            alreadyAsked.push(randomInt)
-
-        }
-
-        }
-        
-    
-    
-    }
 
 
-getAlreadyAsked()
 function setBoard(){
-        trivaQuestion = questions[randomInt].question
+    trivaQuestion = ''
         document.getElementById('triviaQuestions').innerText = trivaQuestion
-        answer0 = questions[randomInt].answers[0]
+        answer0 = ''
         document.getElementById('answer0').innerText = answer0
-        answer1 = questions[randomInt].answers[1]
+        answer1 = ''
         document.getElementById('answer1').innerText = answer1
-        answer2 = questions[randomInt].answers[2]
+        answer2 = ''
         document.getElementById('answer2').innerText = answer2
-        answer3 = questions[randomInt].answers[3]
+        answer3 = ''
+        document.getElementById('answer3').innerText = answer3
+        document.getElementById('answer0').style.backgroundColor = null
+        document.getElementById('answer1').style.backgroundColor = null
+        document.getElementById('answer2').style.backgroundColor = null
+        document.getElementById('answer3').style.backgroundColor = null
+        
+
+
+
+
+        trivaQuestion = questions[i].question
+        document.getElementById('triviaQuestions').innerText = trivaQuestion
+        answer0 = questions[i].answers[0]
+        document.getElementById('answer0').innerText = answer0
+        answer1 = questions[i].answers[1]
+        document.getElementById('answer1').innerText = answer1
+        answer2 = questions[i].answers[2]
+        document.getElementById('answer2').innerText = answer2
+        answer3 = questions[i].answers[3]
         document.getElementById('answer3').innerText = answer3
 }
-setBoard()
+
 let button0 = document.querySelector("#answer0")
 let button1 = document.querySelector("#answer1")
 let button2 = document.querySelector('#answer2')
 let button3 = document.querySelector('#answer3')
 let buttonReset = document.querySelector('#reset')
 let buttonNext = document.querySelector('#next')
+let buttonPlay = document.querySelector('#play')
+let goNext = 0
+let score = 0
 
 
-button0.addEventListener('click', () => {
-    if (questions[randomInt].correct != 0){
-        document.getElementById('answer0').style.backgroundColor = '#FF0000'
-        if (questions[randomInt].correct == 1){
-            document.getElementById('answer1').style.backgroundColor ='#00FF00'
-        }else if (questions[randomInt].correct == 2){
-            document.getElementById('answer2').style.backgroundColor ='#00FF00'
-        }
-        else if (questions[randomInt].correct == 3){
-            document.getElementById('answer3').style.backgroundColor ='#00FF00'
-        }
 
-    }else if(questions[randomInt].correct == 0){
-        document.getElementById('answer0').style.backgroundColor = '#00FF00'
-    }
+function shuffle (){
+    return questions.sort(() => Math.random()-0.5)
+}
+
+function playNext () {
+    i++
+    goNext = 0
+    setBoard()
+    button0.addEventListener('click', () => {
+        goNext ++
+        if (questions[i].correct != 0){
+            document.getElementById('answer0').style.backgroundColor = '#FF0000'
+            if (questions[i].correct == 1){
+                document.getElementById('answer1').style.backgroundColor ='#00FF00'
+            }else if (questions[i].correct == 2){
+                document.getElementById('answer2').style.backgroundColor ='#00FF00'
+            }
+            else if (questions[i].correct == 3){
+                document.getElementById('answer3').style.backgroundColor ='#00FF00'
+            }
     
-})
-button1.addEventListener('click', () => {
-    if (questions[randomInt].correct != 1){
-        document.getElementById('answer1').style.backgroundColor = '#FF0000'
-        if (questions[randomInt].correct == 0){
-            document.getElementById('answer0').style.backgroundColor ='#00FF00'
-        }else if (questions[randomInt].correct == 2){
-            document.getElementById('answer2').style.backgroundColor ='#00FF00'
+        }else if(questions[i].correct == 0){
+            document.getElementById('answer0').style.backgroundColor = '#00FF00'
+            if (goNext ==1){
+                score++
+                document.getElementById('score').innerText = `${score}`
+            }
         }
-        else if (questions[randomInt].correct == 3){
-            document.getElementById('answer3').style.backgroundColor ='#00FF00'
+        
+    })
+    button1.addEventListener('click', () => {
+        goNext++
+        if (questions[i].correct != 1){
+            document.getElementById('answer1').style.backgroundColor = '#FF0000'
+            if (questions[i].correct == 0){
+                document.getElementById('answer0').style.backgroundColor ='#00FF00'
+            }else if (questions[i].correct == 2){
+                document.getElementById('answer2').style.backgroundColor ='#00FF00'
+            }
+            else if (questions[i].correct == 3){
+                document.getElementById('answer3').style.backgroundColor ='#00FF00'
+            }
+    
+        }else if(questions[i].correct == 1){
+            document.getElementById('answer1').style.backgroundColor = '#00FF00'
+            if (goNext ==1){
+                score++
+                document.getElementById('score').innerText = `${score}`
+            }
         }
+    })
+    button2.addEventListener('click', () => {
+        goNext++
+        if (questions[i].correct != 2){
+            document.getElementById('answer2').style.backgroundColor = '#FF0000'
+            if (questions[i].correct == 1){
+                document.getElementById('answer1').style.backgroundColor ='#00FF00'
+            }else if (questions[i].correct == 0){
+                document.getElementById('answer0').style.backgroundColor ='#00FF00'
+            }
+            else if (questions[i].correct == 3){
+                document.getElementById('answer3').style.backgroundColor ='#00FF00'
+            }
+    
+        }else if(questions[i].correct == 2){
+            document.getElementById('answer2').style.backgroundColor = '#00FF00'
+            if (goNext==1){
+                score++
+                document.getElementById('score').innerText = `${score}`
+            }
+        }
+    })
+    button3.addEventListener('click', ()  => {
+        goNext++
+        if (questions[i].correct != 3){
+            document.getElementById('answer3').style.backgroundColor = '#FF0000'
+            if (questions[i].correct == 1){
+                document.getElementById('answer1').style.backgroundColor ='#00FF00'
+            }else if (questions[i].correct == 2){
+                document.getElementById('answer2').style.backgroundColor ='#00FF00'
+            }
+            else if (questions[i].correct == 0){
+                document.getElementById('answer0').style.backgroundColor ='#00FF00'
+            }
+    
+        }else if(questions[i].correct == 3){
+            document.getElementById('answer3').style.backgroundColor = '#00FF00'
+            score++
+            document.getElementById('score').innerText = `${score}`
+        }
+    })
 
-    }else if(questions[randomInt].correct == 1){
-        document.getElementById('answer1').style.backgroundColor = '#00FF00'
-    }
-})
-button2.addEventListener('click', () => {
-    if (questions[randomInt].correct != 2){
-        document.getElementById('answer2').style.backgroundColor = '#FF0000'
-        if (questions[randomInt].correct == 1){
-            document.getElementById('answer1').style.backgroundColor ='#00FF00'
-        }else if (questions[randomInt].correct == 0){
-            document.getElementById('answer0').style.backgroundColor ='#00FF00'
-        }
-        else if (questions[randomInt].correct == 3){
-            document.getElementById('answer3').style.backgroundColor ='#00FF00'
-        }
+}
 
-    }else if(questions[randomInt].correct == 2){
-        document.getElementById('answer2').style.backgroundColor = '#00FF00'
-    }
-})
-button3.addEventListener('click', () => {
-    if (questions[randomInt].correct != 3){
-        document.getElementById('answer3').style.backgroundColor = '#FF0000'
-        if (questions[randomInt].correct == 1){
-            document.getElementById('answer1').style.backgroundColor ='#00FF00'
-        }else if (questions[randomInt].correct == 2){
-            document.getElementById('answer2').style.backgroundColor ='#00FF00'
-        }
-        else if (questions[randomInt].correct == 0){
-            document.getElementById('answer0').style.backgroundColor ='#00FF00'
-        }
 
-    }else if(questions[randomInt].correct == 3){
-        document.getElementById('answer3').style.backgroundColor = '#00FF00'
+buttonPlay.addEventListener('click',() => {
+    shuffle()    
+    i =0                              
+    goNext = 0
+    setBoard()
+    button0.addEventListener('click', () => {
+        goNext ++
+        if (questions[i].correct != 0){
+            document.getElementById('answer0').style.backgroundColor = '#FF0000'
+            if (questions[i].correct == 1){
+                document.getElementById('answer1').style.backgroundColor ='#00FF00'
+            }else if (questions[i].correct == 2){
+                document.getElementById('answer2').style.backgroundColor ='#00FF00'
+            }
+            else if (questions[i].correct == 3){
+                document.getElementById('answer3').style.backgroundColor ='#00FF00'
+            }
+    
+        }else if(questions[i].correct == 0){
+            document.getElementById('answer0').style.backgroundColor = '#00FF00'
+            if (goNext ==1){
+                score++
+                document.getElementById('score').innerText = `${score}`
+            }
+        }
+        
+    })
+    button1.addEventListener('click', () => {
+        goNext++
+        if (questions[i].correct != 1){
+            document.getElementById('answer1').style.backgroundColor = '#FF0000'
+            if (questions[i].correct == 0){
+                document.getElementById('answer0').style.backgroundColor ='#00FF00'
+            }else if (questions[i].correct == 2){
+                document.getElementById('answer2').style.backgroundColor ='#00FF00'
+            }
+            else if (questions[i].correct == 3){
+                document.getElementById('answer3').style.backgroundColor ='#00FF00'
+            }
+    
+        }else if(questions[i].correct == 1){
+            document.getElementById('answer1').style.backgroundColor = '#00FF00'
+            if (goNext ==1){
+                score++
+                document.getElementById('score').innerText = `${score}`
+            }
+        }
+    })
+    button2.addEventListener('click', () => {
+        goNext++
+        if (questions[i].correct != 2){
+            document.getElementById('answer2').style.backgroundColor = '#FF0000'
+            if (questions[i].correct == 1){
+                document.getElementById('answer1').style.backgroundColor ='#00FF00'
+            }else if (questions[i].correct == 0){
+                document.getElementById('answer0').style.backgroundColor ='#00FF00'
+            }
+            else if (questions[i].correct == 3){
+                document.getElementById('answer3').style.backgroundColor ='#00FF00'
+            }
+    
+        }else if(questions[i].correct == 2){
+            document.getElementById('answer2').style.backgroundColor = '#00FF00'
+            if (goNext==1){
+                score++
+                document.getElementById('score').innerText = `${score}`
+            }
+        }
+    })
+    button3.addEventListener('click', ()  => {
+        goNext++
+        if (questions[i].correct != 3){
+            document.getElementById('answer3').style.backgroundColor = '#FF0000'
+            if (questions[i].correct == 1){
+                document.getElementById('answer1').style.backgroundColor ='#00FF00'
+            }else if (questions[i].correct == 2){
+                document.getElementById('answer2').style.backgroundColor ='#00FF00'
+            }
+            else if (questions[i].correct == 0){
+                document.getElementById('answer0').style.backgroundColor ='#00FF00'
+            }
+    
+        }else if(questions[i].correct == 3){
+            document.getElementById('answer3').style.backgroundColor = '#00FF00'
+            score++
+            document.getElementById('score').innerText = `${score}`
+        }
+    })
+    buttonNext.addEventListener('click', () => {
+    playNext()
+    })
+    
+    
+
     }
-})
-buttonNext.addEventListener('click', () =>{
-    alreadyAsked.push(randomInt)
-})
+)

@@ -67,6 +67,8 @@ This game is no different. If your snake collides with any obstacle, itself, or 
 
 [Peakpx](https://www.peakpx.com) for snake pictures
 
+[freeCodeCamp](https://www.freecodecamp.org/news/how-to-shuffle-an-array-of-items-using-javascript-or-typescript/#:~:text=random()%2C%20you%20introduce%20a,method%20shuffles%20the%20array%20randomly.) For the shuffle function
+
 [DiscoverDeadly](https://www.discoverdeadly.com.au/interesting-snake-facts) for snake trivia.
 
 [NPS](https://www.nps.gov/gate/learn/nature/eastern-garter-snake.htm#:~:text=Unlike%20most%20snakes%2C%20garters%20do,f%20Gateway%20National%20Recreation%20Area.) for snake trivia
