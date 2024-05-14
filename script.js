@@ -45,7 +45,7 @@ let questions = [
 {
     question: "Which of These Snakes Do Not Lay Eggs?",
     answers: ["Black Mamba", "Gaboon Viper", "Garter Snake", "Both the Gaboon Viper and Garter Snake"],
-    correct: 1,
+    correct: 3,
     trivia: "Gaboon Vipers and Garter Snakes give live birth. Up to 80 Garter Snakes can be born at a time!"
 },
 {
@@ -181,7 +181,7 @@ function playNext () {
             }
         }
     })
-    button3.addEventListener('click', ()  => {
+    button3.addEventListener('click', () => {
         goNext++
         if (questions[i].correct != 3){
             document.getElementById('answer3').style.backgroundColor = '#FF0000'
@@ -196,10 +196,30 @@ function playNext () {
     
         }else if(questions[i].correct == 3){
             document.getElementById('answer3').style.backgroundColor = '#00FF00'
-            score++
-            document.getElementById('score').innerText = `${score}`
+            if (goNext==1){
+                score++
+                document.getElementById('score').innerText = `${score}`
+            }
         }
     })
+    if(i == (questions.length - 1)){
+        trivaQuestion = ''
+        document.getElementById('triviaQuestions').innerText = trivaQuestion
+        answer0 = ''
+        document.getElementById('answer0').innerText = answer0
+        answer1 = ''
+        document.getElementById('answer1').innerText = answer1
+        answer2 = ''
+        document.getElementById('answer2').innerText = answer2
+        answer3 = ''
+        document.getElementById('answer3').innerText = answer3
+        document.getElementById('answer0').style.backgroundColor = null
+        document.getElementById('answer1').style.backgroundColor = null
+        document.getElementById('answer2').style.backgroundColor = null
+        document.getElementById('answer3').style.backgroundColor = null
+        document.getElementById('score').innerText = `Game Over! You scored ${score}/${questions.length}`
+    }
+
 
 }
 
@@ -273,7 +293,7 @@ buttonPlay.addEventListener('click',() => {
             }
         }
     })
-    button3.addEventListener('click', ()  => {
+    button3.addEventListener('click', () => {
         goNext++
         if (questions[i].correct != 3){
             document.getElementById('answer3').style.backgroundColor = '#FF0000'
@@ -288,8 +308,10 @@ buttonPlay.addEventListener('click',() => {
     
         }else if(questions[i].correct == 3){
             document.getElementById('answer3').style.backgroundColor = '#00FF00'
-            score++
-            document.getElementById('score').innerText = `${score}`
+            if (goNext==1){
+                score++
+                document.getElementById('score').innerText = `${score}`
+            }
         }
     })
     buttonNext.addEventListener('click', () => {
