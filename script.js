@@ -217,7 +217,8 @@ function playNext () {
         document.getElementById('answer1').style.backgroundColor = null
         document.getElementById('answer2').style.backgroundColor = null
         document.getElementById('answer3').style.backgroundColor = null
-        document.getElementById('score').innerText = `Game Over! You scored ${score}/${questions.length}`
+        document.getElementById('score').innerText = `Game Over! You scored ${score}/${questions.length - 1}`
+        
     }
 
 
