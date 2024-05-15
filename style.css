@@ -39,6 +39,8 @@
     text-align: center;
     box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2);
     grid-area: 3/3/5/8;
+    margin-top: 25px;
+    padding-top: 60px;
 }
 
 

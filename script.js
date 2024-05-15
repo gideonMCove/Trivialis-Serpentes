@@ -1,28 +1,33 @@
 let questions = [
 {
-    question: "Which Snake Doesn't Have to Mate to Lay Eggs?",
+    question: "Which of These Snakes Can Give Live Birth",
     answers: ["Copperhead", "Cobra", "Corn Snake","Kingsnake"],
-    correct: 2
+    correct: 2,
+    trivia: ''
 },
 {
     question: "What Do Snakes Smell With?",
     answers: ["Their Nose", "Their Tongue", "Through Their Skin","They Can't Smell"],
-    correct: 1
+    correct: 1,
+    trivia: ''
 },
 {
     question: "Which of These Snakes is Venomous?",
     answers: ["King Cobra", "Milk Snake", "Python", "Kingsnake" ],
-    correct: 0
+    correct: 0,
+    trivia: ''
 },
 {
     question: "Are Snakes Warm-Blooded or Cold-Blooded?",
     answers: ["Warm-Blooded", "Cold-Blooded", "Neither", "Both"],
-    correct: 0
+    correct: 0,
+    trivia: ''
 },
 {
     question: "Around How many different species of snake are in the world?",
     answers :["300", "30,000", "10,000","3,000"],
-    correct: 3
+    correct: 3,
+    trivia: ''
 },
 {
     question: "Which Snake Can Sense Light With its Tail?",
@@ -58,6 +63,7 @@ let questions = [
     question: "About How Many Species of Venomous Snakes are found in the USA?",
     answers: ["1", "127", "30", "57"],
     correct: 2,
+    trivia: ''
     
 }
 
@@ -75,6 +81,8 @@ function setBoard(){
         answer2 = ''
         document.getElementById('answer2').innerText = answer2
         answer3 = ''
+        document.getElementById('trivia').innerText = triviaFacts
+        triviaFacts = ''
         document.getElementById('answer3').innerText = answer3
         document.getElementById('answer0').style.backgroundColor = null
         document.getElementById('answer1').style.backgroundColor = null
@@ -95,6 +103,8 @@ function setBoard(){
         document.getElementById('answer2').innerText = answer2
         answer3 = questions[i].answers[3]
         document.getElementById('answer3').innerText = answer3
+        
+        
 }
 
 let button0 = document.querySelector("#answer0")
@@ -104,6 +114,7 @@ let button3 = document.querySelector('#answer3')
 let buttonReset = document.querySelector('#reset')
 let buttonNext = document.querySelector('#next')
 let buttonPlay = document.querySelector('#play')
+let triviaFacts = document.querySelector('#trivia')
 let goNext = 0
 let score = 0
 
@@ -117,8 +128,11 @@ function playNext () {
     i++
     goNext = 0
     setBoard()
+    document.getElementById('trivia').innerText = ''
     button0.addEventListener('click', () => {
-        goNext ++
+        triviaFacts = questions[i].trivia
+        document.getElementById('trivia').innerText = triviaFacts
+        goNext +=1
         if (questions[i].correct != 0){
             document.getElementById('answer0').style.backgroundColor = '#FF0000'
             if (questions[i].correct == 1){
@@ -134,13 +148,15 @@ function playNext () {
             document.getElementById('answer0').style.backgroundColor = '#00FF00'
             if (goNext ==1){
                 score++
-                document.getElementById('score').innerText = `${score}`
+                document.getElementById('score').innerText = `Score:${score}`
             }
         }
         
     })
     button1.addEventListener('click', () => {
-        goNext++
+        triviaFacts = questions[i].trivia
+        document.getElementById('trivia').innerText = triviaFacts
+        goNext+=1
         if (questions[i].correct != 1){
             document.getElementById('answer1').style.backgroundColor = '#FF0000'
             if (questions[i].correct == 0){
@@ -156,12 +172,14 @@ function playNext () {
             document.getElementById('answer1').style.backgroundColor = '#00FF00'
             if (goNext ==1){
                 score++
-                document.getElementById('score').innerText = `${score}`
+                document.getElementById('score').innerText = `Score:${score}`
             }
         }
     })
     button2.addEventListener('click', () => {
-        goNext++
+        triviaFacts = questions[i].trivia
+        document.getElementById('trivia').innerText = triviaFacts
+        goNext+=1
         if (questions[i].correct != 2){
             document.getElementById('answer2').style.backgroundColor = '#FF0000'
             if (questions[i].correct == 1){
@@ -177,12 +195,14 @@ function playNext () {
             document.getElementById('answer2').style.backgroundColor = '#00FF00'
             if (goNext==1){
                 score++
-                document.getElementById('score').innerText = `${score}`
+                document.getElementById('score').innerText = `Score:${score}`
             }
         }
     })
     button3.addEventListener('click', () => {
-        goNext++
+        triviaFacts = questions[i].trivia
+        document.getElementById('trivia').innerText = triviaFacts
+        goNext+=1
         if (questions[i].correct != 3){
             document.getElementById('answer3').style.backgroundColor = '#FF0000'
             if (questions[i].correct == 1){
@@ -198,7 +218,7 @@ function playNext () {
             document.getElementById('answer3').style.backgroundColor = '#00FF00'
             if (goNext==1){
                 score++
-                document.getElementById('score').innerText = `${score}`
+                document.getElementById('score').innerText = `Score:${score}`
             }
         }
     })
@@ -236,7 +256,9 @@ buttonPlay.addEventListener('click',() => {
     score = 0
     setBoard()
     button0.addEventListener('click', () => {
-        goNext ++
+        triviaFacts = questions[i].trivia
+        document.getElementById('trivia').innerText = triviaFacts
+        goNext +=1
         if (questions[i].correct != 0){
             document.getElementById('answer0').style.backgroundColor = '#FF0000'
             if (questions[i].correct == 1){
@@ -252,13 +274,15 @@ buttonPlay.addEventListener('click',() => {
             document.getElementById('answer0').style.backgroundColor = '#00FF00'
             if (goNext ==1){
                 score++
-                document.getElementById('score').innerText = `${score}`
+                document.getElementById('score').innerText = `Score:${score}`
             }
         }
         
     })
     button1.addEventListener('click', () => {
-        goNext++
+        triviaFacts = questions[i].trivia
+        document.getElementById('trivia').innerText = triviaFacts
+        goNext+=1
         if (questions[i].correct != 1){
             document.getElementById('answer1').style.backgroundColor = '#FF0000'
             if (questions[i].correct == 0){
@@ -274,12 +298,14 @@ buttonPlay.addEventListener('click',() => {
             document.getElementById('answer1').style.backgroundColor = '#00FF00'
             if (goNext ==1){
                 score++
-                document.getElementById('score').innerText = `${score}`
+                document.getElementById('score').innerText = `Score:${score}`
             }
         }
     })
     button2.addEventListener('click', () => {
-        goNext++
+        triviaFacts = questions[i].trivia
+        document.getElementById('trivia').innerText = triviaFacts
+        goNext+=1
         if (questions[i].correct != 2){
             document.getElementById('answer2').style.backgroundColor = '#FF0000'
             if (questions[i].correct == 1){
@@ -295,12 +321,14 @@ buttonPlay.addEventListener('click',() => {
             document.getElementById('answer2').style.backgroundColor = '#00FF00'
             if (goNext==1){
                 score++
-                document.getElementById('score').innerText = `${score}`
+                document.getElementById('score').innerText = `Score:${score}`
             }
         }
     })
     button3.addEventListener('click', () => {
-        goNext++
+        triviaFacts = questions[i].trivia
+        document.getElementById('trivia').innerText = triviaFacts
+        goNext+=1
         if (questions[i].correct != 3){
             document.getElementById('answer3').style.backgroundColor = '#FF0000'
             if (questions[i].correct == 1){
@@ -316,7 +344,7 @@ buttonPlay.addEventListener('click',() => {
             document.getElementById('answer3').style.backgroundColor = '#00FF00'
             if (goNext==1){
                 score++
-                document.getElementById('score').innerText = `${score}`
+                document.getElementById('score').innerText = `Score:${score}`
             }
         }
     })
