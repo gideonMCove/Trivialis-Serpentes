@@ -88,8 +88,6 @@ let questions = [
     // "https://miro.medium.com/v2/resize:fit:1400/0*g2Uy0Zn2Xlvrzi73.jpg"
     
 }
-
-
 ]
 //     ~~~ VARIABLES ~~~
 let button0 = document.querySelector("#answer0")
@@ -110,7 +108,7 @@ let score = 0
 let isDark = 0
 
 //    ~~~ FUNCTIONS ~~~
-function setBoard(){
+function setBoard(){//Removes effects from play and playNext functions
 
     trivaQuestion = ''
         document.getElementById('triviaQuestions').innerText = trivaQuestion
@@ -150,11 +148,11 @@ function setBoard(){
   
 }
 
-function shuffle (){
+function shuffle (){//Credit to Free Code Camp
     return questions.sort(() => Math.random()-0.5)
 }
 
-buttonPlay.addEventListener('click',() => {
+buttonPlay.addEventListener('click',() => {//Turn one of the trivia
     buttonPlay.disabled = true;
     shuffle()    
     i =0                              
@@ -272,7 +270,7 @@ buttonPlay.addEventListener('click',() => {
     }
 )
 
-function playNext () {
+function playNext () {//Every subsequent turn
     i++
     goNext = 0
     setBoard()
@@ -402,6 +400,7 @@ function playNext () {
     }
 
 }
+
 buttonReset.addEventListener('click', () => {
     location.reload()
 })
