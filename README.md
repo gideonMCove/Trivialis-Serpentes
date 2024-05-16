@@ -2,12 +2,9 @@
 <img src ="TitleScreenMockUp.PNG" alt="Title Screen Mockup" width =520px/>
  
 # ***Trivialis-Serpentes***
-The game of *Snake* with a Trivia *Twist*
+*Snake* Trivia!
 
-# The Board
-![The base grid of the game. Shows snake prototype and board objective prototype](./BaseGrid.PNG)
 
-Just like the classic game of *snake*, ***Trivialis-Serpentes*** has a grid board for the *snake* to move around. Each grid square will have its own unique `id`. The *Snake* will be **controlled with the players arrow keys**, and is an `array` that will populate itself with `push()`. The *Snake* must eat the <span style ="color:#D1FFBD">*fruit*</span>, represented by the <span style ="color:#D1FFBD">green square</span>, to gain points. After being eaten, the <span style ="color:#D1FFBD">green square</span> will populate again on the grid in space not taken up by the *Snake*, or any other objects. But thats not all that happens when the *Snake* reaches the <span style ="color:#D1FFBD">green square</span>
 
 # Snake Themed Trivia!
 
@@ -15,7 +12,7 @@ Just like the classic game of *snake*, ***Trivialis-Serpentes*** has a grid boar
 
 > To earn a point you must also answer a trivia question about *Snakes!*
 
- Each question will have three possible answers that can be selected. The answers will be shown on <cards> with both text and images to represent the *Snakes.* Each question and its answers will written with `arrays`inside of `objects` inside of `arrays`, like so:
+ Each question is multiple choice, with 4 possible answers. The answers will be shown on <cards>. Each question and its answers will written with `arrays`inside of `objects` inside of `arrays`, like so:
 
 ```javascript
 Const questions = [
@@ -31,30 +28,9 @@ Const questions = [
 }
 ]
 ```
-To choose what question will be posed to the player, A `random.()` function will be used.
-
-# The Reprecussions of a Wrong Answer
-
-![Shows what happens to your snake after eating a fruit](./SnakeGrowthDemonstration.PNG)
-
-If you answer the trivia question correctly, then your snake will still grow, by at a small rate (snakeLength += 1). If you answer the question incorrectly, your snake ballons in size (snakeLength += 3), as shown in the image above. 
+A `sort()` function will be used to shuffle the array before playing each round.
 
 
-# Making the Board More Interesting
-
-![The Game Board from before, but with obstacles built in](./BoardWithObstacles.PNG)
-
-The user can select difficulty levels at the start which will add obstacles to the board which will make it more difficult to navigate. 
-
-![The Game Board from Before, but With Obstacles built in. Different Template](./BoardWithObstaclesTemplate1.PNG)
-
-# Game over!
-
-![Game Over Screen](./updatedGameOver.PNG)
-
-> Unfortunately, in life all things must come to an end. 
-
-This game is no different. If your snake collides with any obstacle, itself, or the borders of the board you will be presented with a **Game Over** screen. You will be presented with your *score*, which is the amount of correct trivia answers you scored out of the total amount asked. Players will be prompted to play again, which will reset the game state.
 
 ![Whiteboarding](./ProjectOverview.PNG)
 
@@ -76,3 +52,5 @@ This game is no different. If your snake collides with any obstacle, itself, or 
 [JSTOR](https://www.jstor.org/stable/1446454?origin=crossref)
 
 [Smithsonian's National Zoo & Conversation Biology Institute](https://nationalzoo.si.edu/animals/gaboon-viper#:~:text=Gaboon%20vipers%20are%20venomous.,fangs%20of%20any%20venomous%20snake.)
+
+[Slaying The Dragon](https://www.youtube.com/watch?v=EiNiSFIPIQE) For grid help.
