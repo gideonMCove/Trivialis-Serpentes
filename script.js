@@ -1,6 +1,6 @@
 let questions = [
 {
-    question: "Which of These Snakes Can Give Live Birth",
+    question: "Which of These Snakes Can Give Live Birth?",
     answers: ["Copperhead", "Cobra", "Corn Snake","Kingsnake"],
     correct: 2,
     trivia: ''
@@ -387,6 +387,7 @@ buttonDarkMode.addEventListener('click',() =>{
         document.getElementById('answer1').style.color = 'black'
         document.getElementById('answer2').style.color = 'black'
         document.getElementById('answer3').style.color = 'black'
+        document.getElementById('trivia').style.color = 'black'
         
     }else{
         document.getElementById('darkMode').style.backgroundColor = "#636363"
@@ -399,6 +400,7 @@ buttonDarkMode.addEventListener('click',() =>{
         document.getElementById('answer1').style.color = 'white'
         document.getElementById('answer2').style.color = 'white'
         document.getElementById('answer3').style.color = 'white'
+        document.getElementById('trivia').style.color = 'white'
         
     }
     

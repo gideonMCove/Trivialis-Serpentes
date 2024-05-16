@@ -88,3 +88,9 @@
 
 }
 
+@media screen and (max-width: 600px){
+    #score{
+        font-size:15px;
+    }
+}
+
