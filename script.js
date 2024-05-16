@@ -72,6 +72,7 @@ let questions = [
 
 
 function setBoard(){
+
     trivaQuestion = ''
         document.getElementById('triviaQuestions').innerText = trivaQuestion
         answer0 = ''
@@ -82,12 +83,20 @@ function setBoard(){
         document.getElementById('answer2').innerText = answer2
         answer3 = ''
         document.getElementById('trivia').innerText = triviaFacts
-        triviaFacts = ''
+        triviaFacts = ''        
         document.getElementById('answer3').innerText = answer3
-        document.getElementById('answer0').style.backgroundColor = null
-        document.getElementById('answer1').style.backgroundColor = null
-        document.getElementById('answer2').style.backgroundColor = null
-        document.getElementById('answer3').style.backgroundColor = null
+        answer3 = ''
+        if (isDark %2 == 0){
+            document.getElementById('answer0').style.backgroundColor = `whitesmoke`
+            document.getElementById('answer1').style.backgroundColor = `whitesmoke`
+            document.getElementById('answer2').style.backgroundColor = `whitesmoke`
+            document.getElementById('answer3').style.backgroundColor = `whitesmoke`
+        }else if(isDark %2 != 0){
+            document.getElementById('answer0').style.backgroundColor = `#636363`
+            document.getElementById('answer1').style.backgroundColor = `#636363`
+            document.getElementById('answer2').style.backgroundColor = `#636363`
+            document.getElementById('answer3').style.backgroundColor = `#636363`
+        }
         
 
 
@@ -115,8 +124,10 @@ let buttonReset = document.querySelector('#reset')
 let buttonNext = document.querySelector('#next')
 let buttonPlay = document.querySelector('#play')
 let triviaFacts = document.querySelector('#trivia')
+let buttonDarkMode = document.querySelector('#darkMode')
 let goNext = 0
 let score = 0
+let isDark = 0
 
 
 
@@ -361,4 +372,38 @@ buttonPlay.addEventListener('click',() => {
 )
 buttonReset.addEventListener('click', () => {
     location.reload()
+})
+
+buttonDarkMode.addEventListener('click',() =>{
+    isDark += 1
+    if (isDark %2 == 0){
+        document.getElementById('darkMode').style.backgroundColor = "#3b3b3b"
+        document.getElementById('grid').style.backgroundColor = 'aliceblue'
+        document.getElementById('triviaQuestions').style.color = "black"
+        document.getElementById('triviaQuestions').style.backgroundColor = "whitesmoke"
+        document.getElementById('score').style.color = "black"
+        document.getElementById('score').style.backgroundColor = "whitesmoke"
+        document.getElementById('answer0').style.color = 'black'
+        document.getElementById('answer1').style.color = 'black'
+        document.getElementById('answer2').style.color = 'black'
+        document.getElementById('answer3').style.color = 'black'
+        
+    }else{
+        document.getElementById('darkMode').style.backgroundColor = "#636363"
+        document.getElementById('grid').style.backgroundColor = "#3b3b3b"
+        document.getElementById('score').style.color = 'white'
+        document.getElementById('score').style.backgroundColor = "#636363"
+        document.getElementById('triviaQuestions').style.color = 'white'
+        document.getElementById('triviaQuestions').style.backgroundColor ="#636363"
+        document.getElementById('answer0').style.color = 'white'
+        document.getElementById('answer1').style.color = 'white'
+        document.getElementById('answer2').style.color = 'white'
+        document.getElementById('answer3').style.color = 'white'
+        
+    }
+    
+    
+    
+   
+    
 })
