@@ -12,7 +12,7 @@
 
 > To earn a point you must also answer a trivia question about *Snakes!*
 
- Each question is multiple choice, with 4 possible answers. The answers will be shown on <cards>. Each question and its answers will written with `arrays`inside of `objects` inside of `arrays`, like so:
+ Each question is multiple choice, with 4 possible answers. The answers will be shown on `<cards>`. Each question and its answers will written with `arrays`inside of `objects` inside of `arrays`, like so:
 
 ```javascript
 Const questions = [
@@ -29,6 +29,8 @@ Const questions = [
 ]
 ```
 A `sort()` function will be used to shuffle the array before playing each round.
+
+Try to score all ten out of ten!
 
 
 
@@ -49,9 +51,9 @@ A `sort()` function will be used to shuffle the array before playing each round.
 
 [NPS](https://www.nps.gov/gate/learn/nature/eastern-garter-snake.htm#:~:text=Unlike%20most%20snakes%2C%20garters%20do,f%20Gateway%20National%20Recreation%20Area.) for snake trivia
 
-[JSTOR](https://www.jstor.org/stable/1446454?origin=crossref)
+[JSTOR](https://www.jstor.org/stable/1446454?origin=crossref) for snake trivia
 
-[Smithsonian's National Zoo & Conversation Biology Institute](https://nationalzoo.si.edu/animals/gaboon-viper#:~:text=Gaboon%20vipers%20are%20venomous.,fangs%20of%20any%20venomous%20snake.)
+[Smithsonian's National Zoo & Conversation Biology Institute](https://nationalzoo.si.edu/animals/gaboon-viper#:~:text=Gaboon%20vipers%20are%20venomous.,fangs%20of%20any%20venomous%20snake.) for snake trivia
 
 [wiseoceans](https://wiseoceans.com/creature-feature-friday-olive-sea-snake-copy/) for olive sea snake image
 
