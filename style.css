@@ -37,16 +37,20 @@
 }
 
 #trivia{
-    grid-area: 1/8/3/10;
+    grid-area: 1/7/2/10;
 }
 
 #image{
-    grid-area: 1/7/3/8;
+    grid-area: 2/6/5/10;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-position: center;
     background-image: none;
     background-size: contain;
+    /* object-fit: contain; */
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1;
     
     
 }
@@ -108,3 +112,6 @@
     }
 }
 
+body{
+    background-color: aliceblue;
+}

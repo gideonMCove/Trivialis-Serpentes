@@ -279,6 +279,7 @@ function playNext () {
     goNext = 0
     setBoard()
     document.getElementById('trivia').innerText = ''
+    document.getElementById('image').style.backgroundImage = null
     button0.addEventListener('click', () => {
         triviaFacts = questions[i].trivia        
         document.getElementById('trivia').innerText = triviaFacts
@@ -421,6 +422,7 @@ buttonDarkMode.addEventListener('click',() =>{
         document.getElementById('answer2').style.color = 'black'
         document.getElementById('answer3').style.color = 'black'
         document.getElementById('trivia').style.color = 'black'
+        document.body.style.backgroundColor = "aliceblue"
         
     }else{
         document.getElementById('darkMode').style.backgroundColor = "#636363"
@@ -434,6 +436,7 @@ buttonDarkMode.addEventListener('click',() =>{
         document.getElementById('answer2').style.color = 'white'
         document.getElementById('answer3').style.color = 'white'
         document.getElementById('trivia').style.color = 'white'
+        document.body.style.backgroundColor = "#3b3b3b"
         
     }   
     
