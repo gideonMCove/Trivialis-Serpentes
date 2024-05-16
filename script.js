@@ -253,8 +253,9 @@ buttonPlay.addEventListener('click',() => {
     shuffle()    
     i =0                              
     goNext = 0
-    score = 0
+    score = 0    
     setBoard()
+    document.getElementById('trivia').innerHTML = ``
     button0.addEventListener('click', () => {
         triviaFacts = questions[i].trivia
         document.getElementById('trivia').innerText = triviaFacts
