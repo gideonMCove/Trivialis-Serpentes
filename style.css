@@ -24,36 +24,57 @@
 #play{
     grid-area: 1/1/2/2;
     background-color: chartreuse;
+    transition: background-color 0.25s ease-in-out;
+}
+
+#play:hover{
+    background-color: rgb(127,255,100.5);    
+    transition: background-color 0.25s ease-in-out;
 }
 
 #reset{
     grid-area: 1/2/2/4;
     background-color: crimson;
+    transition: background-color 0.25s ease-in-out;
+}
+
+#reset:hover{
+    background-color: rgb(220,50,50.5);
+    transition: background-color 0.25s ease-in-out;
 }
 
 #next{
     grid-area: 2/1/3/4;
     background-color: grey;
+    transition: background-color 0.25s ease-in-out;
+}
+
+#next:hover{
+    background-color: rgb(138,138,138);
+    transition: background-color 0.25s ease-in-out;
 }
 
 #trivia{
     grid-area: 1/7/2/10;
+    font-size: 18px;
 }
 
 #image{
-    grid-area: 2/6/5/10;
+    grid-area: 2/7/5/9;
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     background-position: center;
     background-image: none;
     background-size: contain;
-    /* object-fit: contain; */
+    object-fit: contain;
     max-width: 100%;
     max-height: 100%;
     z-index: 1;
-    
-    
+    border-radius: 50%;
+        
 }
+
+
 
 #triviaQuestions{
     text-align: center;
@@ -72,15 +93,26 @@
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
     grid-area: 5/2/7/5;
     background-color: whitesmoke;
+    transition: opacity 0.25s ease-in-out;
     
-    
+}
+
+#answer0:hover{
+    opacity: 0.6;
+    transition: opacity 0.25s ease-in-out;
 }
 
 #answer1{
     text-align:center;    
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
     grid-area: 5/6/7/9; 
-    background-color: whitesmoke;   
+    background-color: whitesmoke; 
+    transition: opacity 0.25s ease-in-out;  
+}
+
+#answer1:hover{
+    opacity: 0.6;
+    transition: opacity 0.25s ease-in-out;
 }
 
 #answer2{
@@ -88,6 +120,12 @@
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2); 
     grid-area: 7/2/9/5; 
     background-color: whitesmoke;  
+    transition: opacity 0.25s ease-in-out;
+}
+
+#answer2:hover{
+    opacity: 0.6;
+    transition: opacity 0.25s ease-in-out;
 }
 
 #answer3{
@@ -95,13 +133,25 @@
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
     grid-area: 7/6/9/9;    
     background-color: whitesmoke;
+    transition: opacity 0.25s ease-in-out;
+}
+
+#answer3:hover{
+    opacity: 0.6;
+    transition: opacity 0.25s ease-in-out;
 }
 
 #darkMode{
     grid-area: 9/1/10/2;
     background-color: #3b3b3b;
+    transition: opacity 0.25s ease-in-out;
     color: white;
 
+}
+
+#darkMode:hover{
+    opacity: 0.6;
+    transition: opacity 0.25s ease-in-out;
 }
 
 

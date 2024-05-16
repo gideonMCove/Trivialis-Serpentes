@@ -1,17 +1,17 @@
 let questions = [
 {
-    question: "Which of These Snakes Can Give Live Birth?",
-    answers: ["Copperhead", "Cobra", "Corn Snake","Kingsnake"],
+    question: "Which of These Snakes Doesn't Have to Mate to Lay Eggs?",
+    answers: ["Black Mamba", "Cobra", "Corn Snake","Yellow-Lipped Sea Krait"],
     correct: 2,
-    trivia: '',
+    trivia: 'Corn Snakes can reproduce through parthenogenesis, where females lay fertile eggs without a male snake.',
     image: 'cornSnake.jpg'
     // "https://cdn.pixabay.com/photo/2014/12/25/14/54/snake-579682_1280.jpg"
 },
 {
-    question: "What Do Snakes Smell With?",
+    question: "What Do Snakes Primarily Smell With?",
     answers: ["Their Nose", "Their Tongue", "Through Their Skin","They Can't Smell"],
     correct: 1,
-    trivia: '',
+    trivia: 'While snakes can smell through their nostrils, most of the smelling is done with their tongues, picking up chemical particles in the air.',
     image: 'snakeTongue.avif'
     // "https://images.unsplash.com/photo-1628243777426-b937dc5147e7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c25ha2UlMjB0b25ndWV8ZW58MHx8MHx8fDA%3D"
 },
@@ -19,7 +19,7 @@ let questions = [
     question: "Which of These Snakes is Venomous?",
     answers: ["King Cobra", "Milk Snake", "Python", "Kingsnake" ],
     correct: 0,
-    trivia: '',
+    trivia: `King Cobra's have a strict snake only diet.`,
     image: 'kingCobra.avif'
     // "https://plus.unsplash.com/premium_photo-1661897154120-5b27cd6a0bd5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8a2luZyUyMGNvYnJhfGVufDB8fDB8fHww"
 },
@@ -27,15 +27,15 @@ let questions = [
     question: "Are Snakes Warm-Blooded or Cold-Blooded?",
     answers: ["Warm-Blooded", "Cold-Blooded", "Neither", "Both"],
     correct: 0,
-    trivia: '',
+    trivia: 'Snakes in the summer can become nocturnal, to avoid the hot summer sun',
     image: 'sunbathingSnake.avif'
     // "https://plus.unsplash.com/premium_photo-1675715924047-a9cf6c539d9b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c3VuYmF0aGluZyUyMHNuYWtlfGVufDB8fDB8fHww"
 },
 {
     question: "Around How many different species of snake are in the world?",
-    answers :["300", "30,000", "10,000","3,000"],
+    answers :["400", "40,000", "10,000","4,000"],
     correct: 3,
-    trivia: '',
+    trivia: 'To be specific, there are 4,038 snake species. This makes them the second largest group of reptiles.',
     image: 'snakeSpecies.avif'
     // "https://plus.unsplash.com/premium_photo-1667162417224-b6416612d736?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJldHRpZXN0JTIwc25ha2V8ZW58MHx8MHx8fDA%3D"
 },
@@ -83,7 +83,7 @@ let questions = [
     question: "About How Many Species of Venomous Snakes are found in the USA?",
     answers: ["1", "127", "30", "57"],
     correct: 2,
-    trivia: '',
+    trivia: 'Venom typically either attacks the circulatory system or are neurotoxic',
     image: 'snakeBlackMamba.jpg'
     // "https://miro.medium.com/v2/resize:fit:1400/0*g2Uy0Zn2Xlvrzi73.jpg"
     
@@ -268,9 +268,7 @@ buttonPlay.addEventListener('click',() => {
     })
     buttonReset.addEventListener('click', () => {
         location.reload()
-    })
-    
-
+    })   
     }
 )
 
