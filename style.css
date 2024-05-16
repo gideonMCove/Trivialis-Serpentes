@@ -37,7 +37,14 @@
 }
 
 #trivia{
-    grid-area: 1/7/3/10;
+    grid-area: 1/8/3/10;
+}
+
+#image{
+    grid-area: 1/7/3/8;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 #triviaQuestions{
@@ -87,6 +94,8 @@
     color: white;
 
 }
+
+
 
 @media screen and (max-width: 600px){
     #score{
