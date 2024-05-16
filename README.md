@@ -43,7 +43,7 @@ A `sort()` function will be used to shuffle the array before playing each round.
 
 [Peakpx](https://www.peakpx.com) for snake pictures
 
-[freeCodeCamp](https://www.freecodecamp.org/news/how-to-shuffle-an-array-of-items-using-javascript-or-typescript/#:~:text=random()%2C%20you%20introduce%20a,method%20shuffles%20the%20array%20randomly.) For the shuffle function
+[freeCodeCamp](https://www.freecodecamp.org/news/how-to-shuffle-an-array-of-items-using-javascript-or-typescript/#:~:text=random()%2C%20you%20introduce%20a,method%20shuffles%20the%20array%20randomly.) for the shuffle function
 
 [DiscoverDeadly](https://www.discoverdeadly.com.au/interesting-snake-facts) for snake trivia.
 
@@ -53,4 +53,12 @@ A `sort()` function will be used to shuffle the array before playing each round.
 
 [Smithsonian's National Zoo & Conversation Biology Institute](https://nationalzoo.si.edu/animals/gaboon-viper#:~:text=Gaboon%20vipers%20are%20venomous.,fangs%20of%20any%20venomous%20snake.)
 
-[Slaying The Dragon](https://www.youtube.com/watch?v=EiNiSFIPIQE) For grid help.
+[wiseoceans](https://wiseoceans.com/creature-feature-friday-olive-sea-snake-copy/) for olive sea snake image
+
+[Britannica](https://www.britannica.com/animal/Gaboon-viper) for gaboon image
+
+[Canadian Herpetological Society](https://canadianherpetology.ca/species/species_page.html?cname=Red-sided%20Gartersnake) for garter snake image
+
+[Medium](https://medium.com/globetrotters/a-deadly-venomous-black-mamba-snake-startled-me-in-south-africa-cb3129312b98) for black mamba image
+
+[Slaying The Dragon](https://www.youtube.com/watch?v=EiNiSFIPIQE) for grid help.
