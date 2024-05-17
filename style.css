@@ -74,7 +74,8 @@
     grid-area: 3/3/5/8;
     margin-top: 25px;
     padding-top: 60px;
-    background-color: whitesmoke;    
+    background-color: whitesmoke;
+    padding-bottom: 20px;    
 }
 
 #answer0{
