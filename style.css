@@ -56,7 +56,7 @@
 }
 
 #image{
-    grid-area: 2/7/5/9;
+    grid-area: 2/8/5/10;
     background-repeat: no-repeat;    
     background-position: center;
     background-image: none;
@@ -142,12 +142,48 @@
     transition: opacity 0.25s ease-in-out;
 }
 
-@media screen and (max-width: 600px){
-    #score{
-        font-size:15px;
-    }
-}
-
 body{
     background-color: aliceblue;
+}
+
+@media screen and (max-width: 600px){
+    #grid{
+        grid-template-rows: .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr;
+    }
+    #score{
+        font-size:15px;
+        grid-area: 1 / 3 / 3 / 5;
+    }
+    #reset{
+        grid-area: 1/2/2/3;
+    }
+    #next{
+        grid-area: 2/1/3/3;
+    }
+    #triviaQuestions {
+        grid-area: 3/1/4/5;
+    }
+    #answer0{
+        grid-area: 4/1/5/3;
+    }
+    #answer1{
+        grid-area: 4/3/5/5;
+    }
+    #answer2{
+        grid-area: 5/1/6/3;
+    }
+    #answer3{
+        grid-area: 5/3/6/5;
+    }
+    #image{
+        grid-area: 2/5/6/10;
+    }
+    #trivia{
+        grid-area: 1/5/3/10;
+        font-size: 15px;
+    }
+    #darkMode{
+        grid-area: 6/1/7/5;
+    }
+    
 }
