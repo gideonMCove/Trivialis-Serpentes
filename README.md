@@ -1,5 +1,5 @@
 <!-- ![Project Whiteboard Overview](./TitleScreenMockUp.PNG) -->
-<img src ="TitleScreenMockUp.PNG" alt="Title Screen Mockup" width =520px/>
+<img src ="startScreen.PNG" alt="Title Screen Mockup" width =520px/>
  
 # ***Trivialis-Serpentes***
 *Snake* Trivia!
@@ -8,7 +8,7 @@
 
 # Snake Themed Trivia!
 
-![Shows basic trivia layout](./TriviaPopUp.PNG)
+<img src ="TriviaPopUp.PNG" alt="How the trivia game should look" width =520px/>
 
 > To earn a point you must also answer a trivia question about *Snakes!*
 
@@ -34,7 +34,7 @@ Try to score all ten out of ten!
 
 
 
-![Whiteboarding](./ProjectOverview.PNG)
+<img src ="ProjectOverview.PNG" alt="Whiteboarding mockups" width =520px/>
 
 # Credit
 
